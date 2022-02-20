@@ -1,9 +1,9 @@
 <script context="module">
 	import { gql } from 'graphql-request';
 	import { client } from '$lib/graphql-client';
+	import ProjectCard from '$lib/components/project-card.svelte';
 
 	export const load = async () => {
-
 		const query = gql`
 			query GetProjects {
 				projects {
@@ -32,4 +32,10 @@
 	export let projects;
 </script>
 
-<pre>{JSON.stringify(projects, null, 2)}</pre>
+<h1>Titre</h1>
+
+<div>
+	{#each projects as { name, slug, description, image }}
+		<ProjectCard {name} {description} url={image[0].url} {slug} />
+	{/each}
+</div>
