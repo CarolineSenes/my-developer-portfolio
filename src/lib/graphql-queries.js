@@ -45,3 +45,39 @@ export const projectQuery = gql`
 		}
 	}
 `;
+
+export const postsQuery = gql`
+	query GetPosts {
+		posts {
+			title
+			slug
+			date
+			content
+			tags
+			coverImage {
+				url
+			}
+			authors {
+				name
+			}
+		}
+	}
+`;
+
+export const postQuery = gql`
+	query GetPost ($slug: String!) {
+		post(where: { slug: $slug }) {
+			title
+			slug
+			date
+			content
+			tags
+			coverImage {
+				url
+			}
+			authors {
+				name
+			}
+		}
+	}
+`;
