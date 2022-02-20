@@ -1,7 +1,13 @@
 <script>
 	import '../app.css';
 	import Footer from '$lib/components/footer.svelte';
-	import Navbar from '$lib/components/navbar.svelte'
+	import Navbar from '$lib/components/navbar.svelte';
+	import { onMount } from 'svelte';
+	import { themeChange } from 'theme-change';
+
+	onMount(() => {
+		themeChange(false);
+	});
 </script>
 
 <Navbar />
