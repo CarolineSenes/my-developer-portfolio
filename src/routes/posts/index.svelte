@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>Caroline SENES - Blog</title>
+	<title>Caroline SENES | Blog</title>
 </svelte:head>
 
 <h1 class="text-4xl mb-10 font-extrabold">Articles de blog</h1>

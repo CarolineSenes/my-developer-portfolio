@@ -26,7 +26,7 @@
 </script>
 
 <svelte:head>
-  <title>Caroline SENES - Portfolio</title>
+  <title>Caroline SENES | Portfolio</title>
 </svelte:head>
 
 <h1 class="font-bold text-center mb-20 text-5xl">Bienvenu sur mon portfolio</h1>

@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-    <title>Caroline SENES - {project.name}</title>
+    <title>Caroline SENES | Projets - {project.name}</title>
 </svelte:head>
 
 <div class="sm:-mx-5 md:-mx-10 lg:-mx-20 xl:-mx-38 mb-5">

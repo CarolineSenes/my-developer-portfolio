@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>Caroline SENES - Mes projets</title>
+	<title>Caroline SENES | Projets</title>
 </svelte:head>
 
 <h1 class="font-bold mb-20 text-center text-5xl">Mes projets récents</h1>
