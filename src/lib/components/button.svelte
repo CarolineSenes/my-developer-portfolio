@@ -1,1 +1,0 @@
-<button class="btn btn-primary mt-10"><slot /></button>

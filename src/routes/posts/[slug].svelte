@@ -29,7 +29,7 @@
 	<h1>{title}</h1>
 </div>
 
-<p class="text-secondary text-xs tracking-widest font-semibold">
+<p class="mt-5 uppercase text-sm font-semibold">
 	{new Date(date).toLocaleDateString('fr-FR', {
 		weekday: 'long',
 		year: 'numeric',
@@ -42,7 +42,7 @@
 <div class="mb-5 flex justify-between">
 	<div>
 		{#if tags}
-			<div class="mt-5 space-x-2">
+			<div class="space-x-2">
 				{#each tags as tag}
 					<span class="badge badge-primary">{tag}</span>
 				{/each}
@@ -56,5 +56,5 @@
 </article>
 
 <div>
-	<a class="link" href="/blogs">Retour au portfolio</a>
+	<a class="link" href="/posts">Retour au Blog</a>
 </div>
