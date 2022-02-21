@@ -26,15 +26,17 @@
 	const {
 		name,
 		intro,
+		tags,
 		picture: { url }
 	} = authors[0];
+	console.log(tags);
 </script>
 
 <svelte:head>
 	<title>{name} | Portfolio</title>
 </svelte:head>
 
-<section class="hero bg-base-200 mb-40 rounded-lg">
+<section class="hero bg-base-200 mb-40 rounded-lg p-5">
 	<div class="flex-col hero-content lg:flex-row-reverse">
 		<div class="avatar">
 			<div class="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -43,7 +45,15 @@
 		</div>
 		<div>
 			<h1 class="text-5xl font-bold">Bienvenu sur mon portfolio</h1>
-			<p class="py-6 text-xl">{intro}</p>
+			<p class="py-9 text-xl">{intro}</p>
+			<div class="flex flex-wrap gap-3">
+				{#if tags}
+					{#each tags as tag}
+						<span class="badge badge-primary mr-2 hover:bg-primary-focus cursor-pointer">{tag}</span
+						>
+					{/each}
+				{/if}
+			</div>
 		</div>
 	</div>
 </section>
