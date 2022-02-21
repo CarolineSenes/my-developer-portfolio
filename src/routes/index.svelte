@@ -23,30 +23,33 @@
 <script>
 	export let projects;
 	export let authors;
+	const {
+		name,
+		intro,
+		picture: { url }
+	} = authors[0];
 </script>
 
 <svelte:head>
-	<title>Caroline SENES | Portfolio</title>
+	<title>{name} | Portfolio</title>
 </svelte:head>
 
-{#each authors as { name, intro, picture: { url } }}
-	<div class="hero bg-base-200 mb-40 rounded-lg">
-		<div class="flex-col hero-content lg:flex-row-reverse">
-			<div class="avatar">
-				<div class="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-					<img src={url} alt={name} />
-				</div>
-			</div>
-			<div>
-				<h1 class="text-5xl font-bold">Bienvenu sur mon portfolio</h1>
-				<p class="py-6 text-xl">{intro}</p>
+<section class="hero bg-base-200 mb-40 rounded-lg">
+	<div class="flex-col hero-content lg:flex-row-reverse">
+		<div class="avatar">
+			<div class="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+				<img src={url} alt={name} />
 			</div>
 		</div>
+		<div>
+			<h1 class="text-5xl font-bold">Bienvenu sur mon portfolio</h1>
+			<p class="py-6 text-xl">{intro}</p>
+		</div>
 	</div>
-{/each}
+</section>
 
-<div class="grid gap-10 md:grid-cols-4 md:px-10 lg:grid-cols-6 lg:-mx-52">
+<section class="grid gap-10 md:grid-cols-4 md:px-10 lg:grid-cols-6 lg:-mx-52">
 	{#each projects as { name, slug, description, image }}
 		<ProjectCard {name} {description} url={image[0].url} {slug} />
 	{/each}
-</div>
+</section>

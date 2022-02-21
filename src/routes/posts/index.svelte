@@ -25,7 +25,7 @@
 <h1 class="text-4xl mb-10 font-extrabold">Articles de blog</h1>
 
 {#each posts as { title, slug, content, coverImage, tags }}
-  <div class="card text-center shadow-2xl mb-20">
+  <article class="card text-center shadow-2xl mb-20">
     <figure class="">
       <img
         class=""
@@ -47,5 +47,5 @@
         >
       </div>
     </div>
-  </div>
+  </article>
 {/each}
