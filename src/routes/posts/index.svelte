@@ -22,7 +22,8 @@
 	<title>Caroline SENES | Blog</title>
 </svelte:head>
 
-<h1 class="text-4xl mb-10 font-extrabold">Articles de blog</h1>
+<h1 class="font-bold mb-20 text-center text-5xl">Mes articles récents</h1>
+
 
 {#each posts as { title, slug, content, coverImage, tags }}
   <article class="card text-center shadow-2xl mb-20">

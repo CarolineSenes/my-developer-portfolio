@@ -2,7 +2,7 @@
 	import GithubIcon from './github-icon.svelte';
 	import TwitterIcon from './twitter-icon.svelte';
 	import LinkedinIcon from './linkedin-icon.svelte';
-	import MailIcon from './mail-icon.svelte'
+	import MailIcon from './mail-icon.svelte';
 </script>
 
 <footer class="p-10 footer bg-primary text-primary-content footer-center">
@@ -28,6 +28,6 @@
 		</div>
 	</div>
 	<div>
-		<p>© {`${new Date().getFullYear()}`} - Made with Svelte</p>
+		<p>© {`${new Date().getFullYear()}`} - Made with Svelte, GraphCMS, Tailwind</p>
 	</div>
 </footer>

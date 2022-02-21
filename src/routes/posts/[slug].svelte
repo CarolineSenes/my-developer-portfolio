@@ -54,6 +54,10 @@
 	</div>
 </div>
 
-<article class="prose prose-lg">
+<article class="prose prose-lg my-8">
     {@html marked(content)}
 </article>
+
+<div>
+	<a class="link" href="/blogs">Retour au Blog</a>
+</div>

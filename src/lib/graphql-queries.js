@@ -11,6 +11,7 @@ export const authorsQuery = gql`
 			picture {
 				url
 			}
+			location
 		}
 	}
 `;
@@ -66,7 +67,7 @@ export const postsQuery = gql`
 `;
 
 export const postQuery = gql`
-	query GetPost ($slug: String!) {
+	query GetPost($slug: String!) {
 		post(where: { slug: $slug }) {
 			title
 			slug
@@ -82,3 +83,4 @@ export const postQuery = gql`
 		}
 	}
 `;
+

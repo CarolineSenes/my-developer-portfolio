@@ -34,19 +34,21 @@
 	<div>
 		{#if project.tags}
 			{#each project.tags as tag}
-				<span class="badge badge-primary mr-2 hover:bg-primary-focus cursor-pointer">{tag}</span>
+				<span class="badge badge-primary mr-2">{tag}</span>
 			{/each}
 		{/if}
 	</div>
 </div>
 
-<div class="mb-5 prose flex prose-a:text-primary hover:prose-a:text-primary-focus">
-	<a class="mr-5" href={project.demo}>Demo</a>
-	<a href={project.sourceCode}>Source Code</a>
+<div class="prose flex">
+	<a class="mr-5 link link-secondary" href={project.demo}>Demo</a>
+	<a class="link link-secondary" href={project.sourceCode}>Code source</a>
 </div>
 
-<article class="prose prose-xl">
+<article class="my-8 prose prose-xl">
 	{@html marked(project.description)}
 </article>
 
-<button class="btn btn-primary mt-10">Retour aux projets</button>
+<div>
+	<a class="link" href="/projects">Retour au Portfolio</a>
+</div>

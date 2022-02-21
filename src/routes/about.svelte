@@ -19,8 +19,10 @@
 	const {
 		name,
 		intro,
+		tags,
 		bio,
-		picture: { url }
+		picture: { url },
+		location
 	} = authors[0];
 </script>
 
@@ -28,22 +30,31 @@
 	<title>{name} | A Propos</title>
 </svelte:head>
 
-<h1 class="font-bold text-center mb-20 text-5xl">A Propos</h1>
+<h1 class="font-bold mb-20 text-center text-5xl">A Propos</h1>
 
-<section class="hero bg-base-200 mb-40 rounded-lg">
-	<div class="flex-col hero-content lg:flex-row-reverse">
+<section class="hero bg-base-200 mb-20 rounded-lg p-5">
+	<div class="flex-col hero-content">
 		<div class="avatar">
 			<div class="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
 				<img src={url} alt={name} />
 			</div>
 		</div>
-		<div>
-			<h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
-			<p class="py-6 text-xl">{intro}</p>
+		<div class="items-center text-center">
+			<h2 class="text-5xl font-bold mb-4">{name}</h2>
+			<h3 class="text-3xl font-bold">Développeuse Front-end</h3>
+			<p class="py-9 text-xl">📍 {location}</p>
+			<div class="flex flex-wrap gap-3 justify-center">
+				{#if tags}
+					{#each tags as tag}
+						<span class="badge badge-primary mr-2 hover:bg-primary-focus cursor-pointer">{tag}</span
+						>
+					{/each}
+				{/if}
+			</div>
 		</div>
 	</div>
 </section>
 
-<article>
+<article class="prose prose-lg">
 	{@html marked(bio)}
 </article>
