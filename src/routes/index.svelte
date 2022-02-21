@@ -29,19 +29,17 @@
 	<title>Caroline SENES | Portfolio</title>
 </svelte:head>
 
-<h1 class="font-bold text-center mb-20 text-5xl">Bienvenu sur mon portfolio</h1>
-
 {#each authors as { name, intro, picture: { url } }}
-
-	<div class="flex mb-40 items-end">
-		<div class="mr-6">
-			<h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
-			<p class="text-xl mb-4">{intro}</p>
-		</div>
-
-		<div class="avatar">
-			<div class="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-				<img src={url} alt={name} />
+	<div class="hero bg-base-200 mb-40 rounded-lg">
+		<div class="flex-col hero-content lg:flex-row-reverse">
+			<div class="avatar">
+				<div class="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+					<img src={url} alt={name} />
+				</div>
+			</div>
+			<div>
+				<h1 class="text-5xl font-bold">Bienvenu sur mon portfolio</h1>
+				<p class="py-6 text-xl">{intro}</p>
 			</div>
 		</div>
 	</div>

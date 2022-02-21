@@ -4,7 +4,7 @@
 
 <div class="navbar mb-16 shadow-lg bg-neutral text-neutral-content sticky top-0 z-10">
 	<div class="flex-1 px-2 mx-2">
-		<a class="text-lg font-bold" href="/">Portfolio et Blog</a>
+		<a class="text-lg font-bold" href="/">Caroline SENES</a>
 	</div>
 
 	<div class="dropdown dropdown-left lg:hidden">
