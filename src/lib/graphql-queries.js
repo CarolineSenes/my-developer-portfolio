@@ -56,9 +56,6 @@ export const postsQuery = gql`
 			date
 			content
 			tags
-			coverImage {
-				url
-			}
 			authors {
 				name
 			}
@@ -74,9 +71,6 @@ export const postQuery = gql`
 			date
 			content
 			tags
-			coverImage {
-				url
-			}
 			authors {
 				name
 			}

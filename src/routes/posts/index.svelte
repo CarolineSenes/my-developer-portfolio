@@ -22,31 +22,24 @@
 	<title>Caroline SENES | Blog</title>
 </svelte:head>
 
-<h1 class="font-bold mb-20 text-center text-5xl">Mes articles récents</h1>
+<h1 class="font-bold mb-20 text-center text-5xl">Articles de Blog</h1>
 
+{#each posts as { title, slug, content, date }}
+	<article class="card shadow-2xl mb-10 border border-indigo-500/50">
+		<a href={`/posts/${slug}`}>
+			<div class="card-body p-5 hover:text-accent">
+				<h2 class="font-black text-3xl">{title}</h2>
+				<p class="mb-2 text-accent uppercase text-sm font-semibold">
+					{new Date(date).toLocaleDateString('fr-FR', {
+						weekday: 'long',
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})}
+				</p>
 
-{#each posts as { title, slug, content, coverImage, tags }}
-  <article class="card text-center shadow-2xl mb-20">
-    <figure class="">
-      <img
-        class=""
-        src={coverImage.url}
-        alt={`Cover image for ${title}`}
-      />
-    </figure>
-    <div class="card-body prose">
-      <h2 class="title">{title}</h2>
-      {@html marked(content).slice(0, 150)}
-      <div class="flex justify-center mt-5 space-x-2">
-        {#each tags as tag}
-          <span class="badge badge-primary">{tag}</span>
-        {/each}
-      </div>
-      <div class="justify-center card-actions">
-        <a href={`/posts/${slug}`} class="btn btn-outline btn-primary"
-          >Lire la suite</a
-        >
-      </div>
-    </div>
-  </article>
+				<p>{@html marked(content).slice(0, 150)}...</p>
+			</div>
+		</a>
+	</article>
 {/each}

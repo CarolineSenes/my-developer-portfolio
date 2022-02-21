@@ -18,16 +18,12 @@
 
 <script>
 	export let post;
-	const { title, date, tags, content, coverImage } = post;
+	const { title, date, tags, content } = post;
 </script>
 
 <svelte:head>
 	<title>Caroline SENES | Blog - {title}</title>
 </svelte:head>
-
-<div class="sm:-mx-5 md:-mx-10 lg:-mx-20 xl:-mx-38 mb-5">
-	<img src={coverImage.url} alt={`Vignette pour ${title}`} class="rounded-xl" />
-</div>
 
 <div class="prose prose-xl">
 	<h1>{title}</h1>
@@ -41,6 +37,7 @@
 		day: 'numeric'
 	})}
 </p>
+
 
 <div class="mb-5 flex justify-between">
 	<div>
@@ -59,5 +56,5 @@
 </article>
 
 <div>
-	<a class="link" href="/blogs">Retour au Blog</a>
+	<a class="link" href="/blogs">Retour au portfolio</a>
 </div>

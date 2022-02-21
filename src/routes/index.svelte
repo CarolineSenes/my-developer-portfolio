@@ -29,7 +29,6 @@
 		tags,
 		picture: { url }
 	} = authors[0];
-	console.log(tags);
 </script>
 
 <svelte:head>
@@ -49,7 +48,7 @@
 			<div class="flex flex-wrap gap-3">
 				{#if tags}
 					{#each tags as tag}
-						<span class="badge badge-primary mr-2 hover:bg-primary-focus cursor-pointer">{tag}</span
+						<span class="badge badge-primary mr-2">{tag}</span
 						>
 					{/each}
 				{/if}
