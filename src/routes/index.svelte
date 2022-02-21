@@ -1,5 +1,5 @@
 <script context="module">
-	import { authorsQuery, projectsQuery } from '$lib/graphql-queries'
+	import { authorsQuery, projectsQuery } from '$lib/graphql-queries';
 	import { client } from '$lib/graphql-client';
 	import ProjectCard from '$lib/components/project-card.svelte';
 
@@ -26,19 +26,24 @@
 </script>
 
 <svelte:head>
-  <title>Caroline SENES | Portfolio</title>
+	<title>Caroline SENES | Portfolio</title>
 </svelte:head>
 
 <h1 class="font-bold text-center mb-20 text-5xl">Bienvenu sur mon portfolio</h1>
 
 {#each authors as { name, intro, picture: { url } }}
+
 	<div class="flex mb-40 items-end">
 		<div class="mr-6">
 			<h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
 			<p class="text-xl mb-4">{intro}</p>
 		</div>
 
-		<img class="mask mask-squircle h-48" src={url} alt={name} />
+		<div class="avatar">
+			<div class="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+				<img src={url} alt={name} />
+			</div>
+		</div>
 	</div>
 {/each}
 

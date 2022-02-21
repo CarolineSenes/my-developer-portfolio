@@ -36,7 +36,11 @@
 		<p class="text-xl mb-4">{intro}</p>
 	</div>
 
-    <img class="mask mask-squircle h-48" src="{url}" alt="{url}">
+	<div class="avatar">
+		<div class="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+			<img src={url} alt={name} />
+		</div>
+	</div>
 </div>
 
 <article>
