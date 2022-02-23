@@ -1,7 +1,7 @@
 import { client } from '$lib/graphql-client';
 import { gql } from 'graphql-request';
 
-const website = 'https://www.myporfolioproject.com';
+const website = 'https://my-developer-portfolio-theta.vercel.app/';
 
 export const get = async () => {
 	const query = gql`
@@ -10,9 +10,10 @@ export const get = async () => {
 				title
 				slug
 			}
-		}
+		},
 	`;
 	const { posts } = await client.request(query);
+	
 	const pages = [`about`];
 	const body = sitemap(posts, pages);
 

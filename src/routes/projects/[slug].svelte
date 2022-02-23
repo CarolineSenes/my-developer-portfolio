@@ -28,7 +28,7 @@
 	<img class="rounded-lg" src={project.image[0].url} alt={project.title} />
 </div>
 
-<h1 class="text-4xl font-semibold mb-5">{project.name}</h1>
+<h1 class="mb-5">{project.name}</h1>
 
 <div class="mb-5 flex justify-between">
 	<div>
@@ -47,6 +47,12 @@
 
 <article class="my-8 prose prose-xl">
 	{@html marked(project.description)}
+	<h2>Le projet</h2>
+		{@html marked(project.brief)}
+	<h2>Mon rôle</h2>
+		{@html marked(project.role)}
+	<h2>En détails</h2>
+		{@html marked(project.details)}
 </article>
 
 <div>

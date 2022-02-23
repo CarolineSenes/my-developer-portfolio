@@ -1,5 +1,22 @@
-/* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Open+Sans:wght@300&display=swap');/* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
+@layer base {
+    h1 {
+      @apply text-5xl font-bold;
+    }
+    h2 {
+      @apply font-bold;
+    }
+  }

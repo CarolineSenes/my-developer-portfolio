@@ -18,7 +18,7 @@
 	export let authors;
 	const {
 		name,
-		intro,
+		poste,
 		tags,
 		bio,
 		picture: { url },
@@ -41,7 +41,7 @@
 		</div>
 		<div class="items-center text-center">
 			<h2 class="text-5xl font-bold mb-4">{name}</h2>
-			<h3 class="text-3xl font-bold">Développeuse Front-end</h3>
+			<h3 class="text-3xl font-bold">{poste}</h3>
 			<p class="py-9 text-xl">📍 {location}</p>
 			<div class="flex flex-wrap gap-3 justify-center">
 				{#if tags}

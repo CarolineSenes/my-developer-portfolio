@@ -5,6 +5,7 @@ export const authorsQuery = gql`
 		authors {
 			name
 			intro
+			poste
 			tags
 			bio
 			slug
@@ -22,9 +23,6 @@ export const projectsQuery = gql`
 			name
 			slug
 			description
-			tags
-			demo
-			sourceCode
 			image {
 				url
 			}
@@ -38,6 +36,9 @@ export const projectQuery = gql`
 			name
 			slug
 			description
+			brief
+			role
+			details
 			tags
 			demo
 			sourceCode

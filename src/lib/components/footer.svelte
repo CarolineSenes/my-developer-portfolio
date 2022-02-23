@@ -8,10 +8,10 @@
 <footer class="p-10 footer bg-primary text-primary-content">
 	<div>
 		<p>© {`${new Date().getFullYear()}`} - Créé avec Svelte, GraphCMS, Tailwind</p>
-		<p>Mentions légales</p>
 	</div>
 	<div class="gap-4">
 		<span class="footer-title">Plan</span>
+		<a class="link link-hover" href="/">Accueil</a>
 		<a class="link link-hover" href="/projects">Portfolio</a>
 		<a class="link link-hover" href="/posts">Blog</a>
 		<a class="link link-hover" href="/about">A Propos</a>
@@ -39,3 +39,4 @@
 		</a>
 	</div>
 </footer>
+
