@@ -45,6 +45,9 @@ export const projectQuery = gql`
 			image {
 				url
 			}
+			lighthouse {
+				url
+			}
 		}
 	}
 `;

@@ -53,8 +53,21 @@
 		{@html marked(project.role)}
 	<h2>En détails</h2>
 		{@html marked(project.details)}
+		
+		<figure>
+			<img class="rounded-lg" src={project.lighthouse.url} alt="scores lighthouse" />
+			<figcaption>Scores Lighthouse obtenus pour la version Desktop</figcaption>
+		</figure>
 </article>
 
 <div>
 	<a class="link" href="/projects">Retour au Portfolio</a>
 </div>
+
+<style>
+	figcaption{
+		color: inherit;
+		font-style: italic;
+		margin-top: 5px;
+	}
+</style>
