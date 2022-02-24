@@ -41,7 +41,7 @@
 </div>
 
 <div class="prose flex">
-	<a class="mr-5 link link-secondary" href={project.demo}>Demo</a>
+	{#if project.demo}<a class="mr-5 link link-secondary" href={project.demo}>Demo</a>{/if}
 	<a class="link link-secondary" href={project.sourceCode}>Code source</a>
 </div>
 
@@ -54,10 +54,13 @@
 	<h2>En détails</h2>
 		{@html marked(project.details)}
 		
+		{#if project.lighthouse}
 		<figure>
 			<img class="rounded-lg" src={project.lighthouse.url} alt="scores lighthouse" />
 			<figcaption>Scores Lighthouse obtenus pour la version Desktop</figcaption>
 		</figure>
+		{/if}
+
 </article>
 
 <div>
