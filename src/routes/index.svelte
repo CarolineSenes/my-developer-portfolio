@@ -58,7 +58,7 @@
 </section>
 
 <section class="grid gap-10 md:grid-cols-4 md:px-10 lg:grid-cols-6 lg:-mx-52">
-	{#each projects as { name, slug, description, image }}
-		<ProjectCard {name} {description} url={image[0].url} {slug} />
+	{#each projects as { name, slug, description, image, tags }}
+		<ProjectCard {name} {description} url={image[0].url} {slug} {tags}/>
 	{/each}
 </section>

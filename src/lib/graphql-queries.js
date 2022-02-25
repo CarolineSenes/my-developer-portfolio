@@ -22,6 +22,7 @@ export const projectsQuery = gql`
 		projects {
 			name
 			slug
+			tags
 			description
 			image {
 				url
