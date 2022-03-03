@@ -32,7 +32,7 @@
 </script>
 
 <svelte:head>
-	<title>{name} | Portfolio</title>
+	<title>{name} | Portfolio & Blog</title>
 </svelte:head>
 
 <section class="hero bg-base-200 mb-40 rounded-lg p-5">
