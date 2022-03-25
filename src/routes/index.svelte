@@ -48,7 +48,7 @@
 			<div class="flex flex-wrap gap-3">
 				{#if tags}
 					{#each tags as tag}
-						<span class="badge badge-primary mr-2">{tag}</span
+						<span class="badge badge-primary">{tag}</span
 						>
 					{/each}
 				{/if}
@@ -59,6 +59,6 @@
 
 <section class="grid gap-10 md:grid-cols-4 md:px-10 lg:grid-cols-6 lg:-mx-52">
 	{#each projects as { name, slug, description, image, tags }}
-		<ProjectCard {name} {description} url={image[0].url} {slug} {tags}/>
+		<ProjectCard {name} {description} url={image[0].url} {slug} {tags} />
 	{/each}
 </section>
