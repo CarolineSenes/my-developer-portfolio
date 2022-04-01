@@ -7,7 +7,7 @@
 
 <footer class="p-10 footer bg-primary text-primary-content">
 	<div>
-		<p>© {`${new Date().getFullYear()}`} - Créé avec Svelte, GraphCMS, Tailwind</p>
+		<p>© {`${new Date().getFullYear()}`} - Créé avec Sveltekit, GraphCMS, Tailwind</p>
 	</div>
 	<div class="gap-4">
 		<span class="footer-title">Plan</span>
