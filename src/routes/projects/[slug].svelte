@@ -14,7 +14,6 @@
 			}
 		};
 	};
-	console.log(projects);
 </script>
 
 <script>
