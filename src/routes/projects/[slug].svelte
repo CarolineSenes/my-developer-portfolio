@@ -46,7 +46,6 @@
 </div>
 
 <article class="my-8 prose prose-xl">
-	{@html marked(project.description)}
 	<h2>Le projet</h2>
 	{@html marked(project.brief)}
 	<h2>Mon rôle</h2>
