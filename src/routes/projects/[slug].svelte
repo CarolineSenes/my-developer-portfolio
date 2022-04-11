@@ -14,6 +14,7 @@
 			}
 		};
 	};
+	console.log(projects);
 </script>
 
 <script>
@@ -46,21 +47,19 @@
 </div>
 
 <article class="my-8 prose prose-xl">
-	{@html marked(project.description)}
 	<h2>Le projet</h2>
-		{@html marked(project.brief)}
+	{@html marked(project.brief)}
 	<h2>Mon rôle</h2>
-		{@html marked(project.role)}
+	{@html marked(project.role)}
 	<h2>En détails</h2>
-		{@html marked(project.details)}
-		
-		{#if project.lighthouse}
+	{@html marked(project.details)}
+
+	{#if project.lighthouse}
 		<figure>
 			<img class="rounded-lg" src={project.lighthouse.url} alt="scores lighthouse" />
 			<figcaption>Scores Lighthouse obtenus pour la version Desktop</figcaption>
 		</figure>
-		{/if}
-
+	{/if}
 </article>
 
 <div>
@@ -68,7 +67,7 @@
 </div>
 
 <style>
-	figcaption{
+	figcaption {
 		color: inherit;
 		font-style: italic;
 		margin-top: 5px;
